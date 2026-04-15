@@ -22,4 +22,11 @@
         </dependency>
     </dependencies>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/paveena-naebsuwan/textformatter-library</url>
+        </repository>
+    </distributionManagement>
+
 </project>
