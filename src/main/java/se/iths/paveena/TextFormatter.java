@@ -1,35 +1,24 @@
 package se.iths.paveena;
 
-import java.util.Locale;
-
 public class TextFormatter {
 
-    //Metoden konverterar den första bokstaven i en sträng till versal och returnerar den nya strängen.
-    public String capitalize(String toUpperCase) {
-        //Ta emot första bokstaven i strängen
-        char firstLetter = toUpperCase.charAt(0);
-        //Konvertera den första bokstaven till versal
-        char capitalFirstLetter = Character.toUpperCase(firstLetter);
-        //Returnerar den nya sträng
-        return toUpperCase.replace(toUpperCase.charAt(0),capitalFirstLetter);
-    }
-    //Metoden konverterar alla bokstäver i en sträng till gemener och returnerar den nya strängen.
-    public String gemener(String text) {
-        //Om texten är null, returnera ett felmeddelande
-        if (text == null) {
-            return ("Du måste ange en text");
-        }
-        //Returnerar den nya sträng med alla bokstäver i gemener
-        return text.toLowerCase(Locale.ROOT);
+    // Gör texten till versaler
+    public String toUpperCase(String text) {
+        return text.toUpperCase();
     }
 
-    public String blank(String text) {
-        //Ta bort mellanslag i början och slutet
-        String trimmed = text.trim();
-        //Kontrollerar att texten inte är null, annars returnera null
-        if (text == null) {
-            return null;
-        }
-        return trimmed;
+    // Gör texten till gemener
+    public String toLowerCase(String text) {
+        return text.toLowerCase();
+    }
+
+    // Tar bort onödiga mellanslag i början och slutet
+    public String trim(String text) {
+        return text.trim();
+    }
+
+    // Tar bort alla extra mellanslag även inuti strängen
+    public String normalizeSpaces(String text) {
+        return text.trim().replaceAll("\\s+", " ");
     }
 }

@@ -1,1 +1,2 @@
 se.iths.paveena.config.TextFormatterConfig
+org.springframework.boot.autoconfigure.AutoConfiguration.imports
